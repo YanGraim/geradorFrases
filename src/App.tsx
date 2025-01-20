@@ -15,7 +15,7 @@ function App() {
       </section>
       <button className='button-frase'>Gerar Frase</button>
 
-      <h3 className='textoFrase'>Alguma frase vai vir aqui</h3>
+      <p className='textoFrase'>Alguma frase vai vir aqui</p>
     </div>
   )
 }

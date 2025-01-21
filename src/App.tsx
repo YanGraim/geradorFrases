@@ -46,6 +46,11 @@ function App() {
    setCategoriaSelecionada(index)
   }
 
+  function gerarFrase() {
+    const numeroAleatorio = Math.floor(Math.random() * allFrases[categoriaSelecionada].frases.length);
+    setTextoFrase(`"${allFrases[categoriaSelecionada].frases[numeroAleatorio]}"`);
+  }
+
   return (
     <div className='container'>
       <img src={logoimg} alt="Logo frases" className='logo'/>
@@ -58,9 +63,9 @@ function App() {
           </button>
         ))}
       </section>
-      <button className='button-frase'>Gerar Frase</button>
+      <button className='button-frase' onClick={gerarFrase}>Gerar Frase</button>
 
-      {textoFrase !== '' && <p className='textoFrase'>Alguma frase vai vir aqui</p>}
+      {textoFrase !== '' && <p className='textoFrase'>{textoFrase}</p>}
     </div>
   )
 }
